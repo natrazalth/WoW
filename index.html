@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My WoW Builds</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 40px;
+    }
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 10px;
+      max-width: 500px;
+    }
+    button {
+      background: #38bdf8;
+      border: none;
+      padding: 10px 20px;
+      color: black;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0ea5e9;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>WoW Export Strings</h1>
+
+  <div class="card">
+    <h2>Mythic+ Build</h2>
+    <button onclick="copyText('mplus')">Copy</button>
+    <textarea id="mplus" style="display:none;">
+PASTE YOUR STRING HERE
+    </textarea>
+  </div>
+
+  <div class="card">
+    <h2>Raid Build</h2>
+    <button onclick="copyText('raid')">Copy</button>
+    <textarea id="raid" style="display:none;">
+PASTE YOUR STRING HERE
+    </textarea>
+  </div>
+
+  <script>
+    function copyText(id) {
+      var text = document.getElementById(id);
+      text.style.display = "block";
+      text.select();
+      document.execCommand("copy");
+      text.style.display = "none";
+      alert("Copied to clipboard!");
+    }
+  </script>
+
+</body>
+</html>
