@@ -18,7 +18,7 @@
     .section-title {
       color: white;
       font-size: 24px;
-      margin-top: 40px;
+      margin-top: 30px;
       margin-bottom: 10px;
     }
 
@@ -27,6 +27,20 @@
       margin: 15px auto;
       border-radius: 10px;
       max-width: 500px;
+    }
+
+    /* Layout for M+ and Raid */
+    .two-column {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .column {
+      width: 400px;
     }
 
     /* Pres = dim dark green */
@@ -53,10 +67,17 @@
       border-radius: 6px;
       cursor: pointer;
       margin-top: 10px;
+      transition: 0.2s ease;
     }
 
     button:hover {
       background: #0ea5e9;
+    }
+
+    /* Copied state */
+    button.copied {
+      background: #22c55e;
+      color: white;
     }
   </style>
 </head>
@@ -67,53 +88,62 @@
   <!-- Profiles -->
   <div class="card neutral">
     <h2>Platynator Profile</h2>
-    <button onclick="copyText('plat')">Copy</button>
+    <button onclick="copyText('plat', this)">Copy</button>
     <textarea id="plat" style="display:none;">PASTE STRING HERE</textarea>
   </div>
 
   <div class="card neutral">
     <h2>BCDM Profile</h2>
-    <button onclick="copyText('bcdm')">Copy</button>
+    <button onclick="copyText('bcdm', this)">Copy</button>
     <textarea id="bcdm" style="display:none;">PASTE STRING HERE</textarea>
   </div>
 
-  <!-- M+ Section -->
-  <div class="section-title">M+</div>
+  <!-- M+ and Raid side by side -->
+  <div class="two-column">
 
-  <div class="card pres">
-    <h2>Pres</h2>
-    <button onclick="copyText('mplus-pres')">Copy</button>
-    <textarea id="mplus-pres" style="display:none;">PASTE STRING HERE</textarea>
+    <!-- M+ -->
+    <div class="column">
+      <div class="section-title">M+</div>
+
+      <div class="card pres">
+        <h2>Pres</h2>
+        <button onclick="copyText('mplus-pres', this)">Copy</button>
+        <textarea id="mplus-pres" style="display:none;">PASTE STRING HERE</textarea>
+      </div>
+
+      <div class="card dev">
+        <h2>Dev</h2>
+        <button onclick="copyText('mplus-dev', this)">Copy</button>
+        <textarea id="mplus-dev" style="display:none;">PASTE STRING HERE</textarea>
+      </div>
+    </div>
+
+    <!-- Raid -->
+    <div class="column">
+      <div class="section-title">Raid</div>
+
+      <div class="card pres">
+        <h2>Pres</h2>
+        <button onclick="copyText('raid-pres', this)">Copy</button>
+        <textarea id="raid-pres" style="display:none;">PASTE STRING HERE</textarea>
+      </div>
+
+      <div class="card dev">
+        <h2>Dev Cleave</h2>
+        <button onclick="copyText('raid-dev-cleave', this)">Copy</button>
+        <textarea id="raid-dev-cleave" style="display:none;">PASTE STRING HERE</textarea>
+      </div>
+
+      <div class="card dev">
+        <h2>Dev ST</h2>
+        <button onclick="copyText('raid-dev-st', this)">Copy</button>
+        <textarea id="raid-dev-st" style="display:none;">PASTE STRING HERE</textarea>
+      </div>
+    </div>
+
   </div>
 
-  <div class="card dev">
-    <h2>Dev</h2>
-    <button onclick="copyText('mplus-dev')">Copy</button>
-    <textarea id="mplus-dev" style="display:none;">PASTE STRING HERE</textarea>
-  </div>
-
-  <!-- Raid Section -->
-  <div class="section-title">Raid</div>
-
-  <div class="card pres">
-    <h2>Pres</h2>
-    <button onclick="copyText('raid-pres')">Copy</button>
-    <textarea id="raid-pres" style="display:none;">PASTE STRING HERE</textarea>
-  </div>
-
-  <div class="card dev">
-    <h2>Dev Cleave</h2>
-    <button onclick="copyText('raid-dev-cleave')">Copy</button>
-    <textarea id="raid-dev-cleave" style="display:none;">PASTE STRING HERE</textarea>
-  </div>
-
-  <div class="card dev">
-    <h2>Dev ST</h2>
-    <button onclick="copyText('raid-dev-st')">Copy</button>
-    <textarea id="raid-dev-st" style="display:none;">PASTE STRING HERE</textarea>
-  </div>
-
-  <!-- Addons Section -->
+  <!-- Addons -->
   <div class="section-title">Addons</div>
 
   <div class="card neutral">
@@ -121,7 +151,7 @@
     <button onclick="openLink('addon')">Go to Page</button>
   </div>
 
-  <!-- Links Section -->
+  <!-- Links -->
   <div class="section-title">Links</div>
 
   <div class="card neutral">
@@ -135,13 +165,37 @@
   </div>
 
   <script>
-    function copyText(id) {
+    function copyText(id, btn) {
       var text = document.getElementById(id);
-      text.style.display = "block";
-      text.select();
+      var value = text.value.trim();
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(value).then(() => {
+          showCopiedState(btn);
+        }).catch(() => {
+          fallbackCopy(text, btn);
+        });
+      } else {
+        fallbackCopy(text, btn);
+      }
+    }
+
+    function fallbackCopy(textElement, btn) {
+      textElement.style.display = "block";
+      textElement.select();
       document.execCommand("copy");
-      text.style.display = "none";
-      alert("Copied to clipboard!");
+      textElement.style.display = "none";
+      showCopiedState(btn);
+    }
+
+    function showCopiedState(btn) {
+      btn.textContent = "Copied";
+      btn.classList.add("copied");
+
+      setTimeout(() => {
+        btn.textContent = "Copy";
+        btn.classList.remove("copied");
+      }, 1500);
     }
 
     function openLink(type) {
