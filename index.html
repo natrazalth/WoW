@@ -3,23 +3,25 @@
 <head>
   <title>My WoW Builds</title>
   <style>
+    /* ===== BODY & HEADINGS ===== */
     body {
-      font-family: Arial;
+      font-family: Arial, sans-serif;
       background: #0f172a;
       color: white;
       text-align: center;
       padding: 40px;
+      margin: 0;
     }
 
     h1 {
       margin-bottom: 20px;
     }
 
-    /* Top links */
+    /* ===== TOP LINKS ===== */
     .top-links {
       display: flex;
       justify-content: center;
-      gap: 30px;
+      gap: 20px;
       margin-bottom: 40px;
       font-size: 18px;
       align-items: center;
@@ -43,35 +45,19 @@
       height: 20px;
     }
 
-    /* Cards */
+    /* ===== CARDS ===== */
     .card {
       padding: 15px;
-      margin: 10px auto;
       border-radius: 8px;
       max-width: 350px;
+      box-sizing: border-box;
     }
 
-    .two-column, .profile-row {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-
-    .column {
-      width: 320px;
-    }
-
-    .profile-row .card {
-      width: 280px;
-    }
-
-    /* Card colors */
     .pres { background: #14532d; }
     .dev { background: #7f1d1d; }
     .neutral { background: #1e293b; }
 
+    /* ===== BUTTONS ===== */
     button {
       background: #38bdf8;
       border: none;
@@ -91,6 +77,7 @@
       color: white;
     }
 
+    /* ===== SECTION TITLES ===== */
     .section-title {
       color: white;
       font-size: 22px;
@@ -98,8 +85,46 @@
       margin-bottom: 10px;
     }
 
+    /* ===== TEXTAREAS ===== */
     textarea {
       display: none;
+    }
+
+    /* ===== PROFILE ROW ===== */
+    .profile-container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .profile-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .profile-row .card {
+      flex: 0 0 auto;
+      width: 280px;
+      margin: 0;
+    }
+
+    /* ===== M+ & RAID TWO-COLUMN LAYOUT ===== */
+    .two-column {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .column {
+      width: 320px;
+    }
+
+    .column .card {
+      max-width: 100%;
     }
   </style>
 </head>
@@ -121,31 +146,31 @@
   </div>
 
   <!-- Profiles Side by Side -->
-  <div class="profile-row">
-    <div class="card neutral">
-      <h2>BCDM Profile</h2>
-      <button onclick="copyText('bcdm', this)">Copy</button>
-      <textarea id="bcdm">!BCDM_TV163PPYw8)IAwkIg8JGIkRIGxatApFGwIoQSkbYfgpPMp0)2p7zgEmGGsEutp3BwnnLh7zV3ZE2Z(XWV6211X1(H4On(biYLJ8sWkEXKlvd9UlaT2vX1wXB1p2ghTpC9OOGO9KxB01DIOuNEs9goOJqFbP(cdD38P(9DneA8n9A8nIegIDT19oeThZ4VTJ5cc3SxI9d8XhgfffSo6XWB8rpIIjCZwX0XXCoD4DCn67ozGOGuxjXRL6mqy4GUxdSxSpHXtI9UhzJJ9WEGumV11(w)14Da)hibtB60s5WOaVKeYmEUhE1okfMBKdxTlk29ox7zi)T7WWy6FfiCh0pXz2mh)7P2VjrHyB)NqG(luz2yPnDMdD(KEvpxJp1lv3Xz6aJyYpc0F3JzyG3B)akiWW7SYrxDctmSl6r)jtiZ9(5ODEXERWO4e2GpJCHbPTkkSIhrQezYGyEJIrxepeqwBdIUZlGOqltqtP3Si1dgwJk9aQ5YEmAJ3(amZiZ8HM7f6Tfr9ZLxV2h7hf6fmAFco6EYZ(mc9GCYdOvylp4DKzmXiK6Y0tQIjFKQHJQf1OByAOsDnZEwMRjZ(FSB404OhX7g7hdcd0ImVdy52BLF4wk)jYoZ3JiCY9Sv)EmN393hMqKqUp5j8py7zk8glDFpQ2ksErBDjtiYB2s6SLO3lTUr7gzDxQFXCzRpd)YWEM2c2tuuLTDMd)v16R0Nap7wzllnt6WNSm9X2YwZTzxTWY0rDKJMPr2aSmNUuLqU5shD5BthGn5hnd5CkbLrXrx1jxqZLNsh2enlvgftSmTDYe4izd1msxyPPsFJ9mt9uvYEM8yZuPnwZEK2cDTIraVfMPKrybJ00Itpu1vNd(dzwfvJzYgJOpkxZmn(mzOZ1SDUvv(gQXKyUSuVLzTy3FRMX4BL1)C69mJNU5i6GLNmrxRWqzpg0dRLLEaihtDZP5we6tkw9Ur1yQkr3y0pt(gZrzd9gZLwfIDSQSZSpBqDBGbQOBAo(it6sJCJhziwl1gxR9zIQvMTrrwVq(txkBnwtoFDh0b2mNOoGvHJflaMQADd3tKxoLA05DCwaCFSw6IKJLMYYc6lwNpYHJo2POqumlWtwyK8uaNAJc)MX(nh5i7Y8TG0ag2R8cqkhY3XFh5HK7(RiiuLrNRaMm2pHeywEFSN5FJId8oKgi8r3YrTDo8aeoCH)prbG5zpoAfK6IqZKy0)DpkC1bchf6NkwMgctT6Nz5jT)I5Mnjii20Na6x4fJ9xfGizxGasFL7DelBC0kIaTXazYH(3tuR8Xd0pgMe04GTu2FTyS4SPgWFND(R(rikjHYhD)qI(0VMjAlerPPNokClTSbWtnkEnIwxqLjPYEmMLXSfCVKg1vOpZxJX7uNgQNpDvKUig7h(deMFP9UFlzSM0xSJyVUd7d5HfHSYDizI7X05ZMfJwyWzsCLotijqmeefe7iqMu(jYap(B6CnGQZAHRr)0TiPtrIrMDx5a40HcXPssHUfbJUNMEYTvPZ5z6LnhA7TLWmkjpJlUCE)gmeNzbyM)A0FHIJiLeUf2Ha(r27IEKiP)ZEpsn3P(4kVa3h6osIA(rvvpppIpQQ6JQQ()NQQibBCBvWH)TeJMnB)xs0zL9B2KEGpxUt5jB1R0rAWvN6l90no36yEXLTwCVYdTbNFmt9GYNo(yMoYnA5cUtzsSSpFnNjv1v(SZdJFLNEkA5l7DVIUc8h2r6q8cPz8kTJq4SrfekTNPrFfLrJN)nBeq5AV4dlIEeft85jwhgnIUtK62zG41d7jmuyW1cSIDzMmrQfBeSZfggvrVRWf(moNSGmSIMl1f45DCutsar6ZA4K3UiEw7Iyj7Iy9vWuTv02fVSxl86tTvZII9FcKNxqaTH0w347NeUoTnO0t(9ipJbNZcqOGZZyGB9NSCUnUfNTmSVVtZtUlQbMABkDCeeYPBGk7LtFI5s9uobT8oKYSoxbUivAefY7pDkTmakPCcTZv9hMtNX15mRVukZ6Nr31C01DqoHDtPlJSHsCIfuVVnXsMwvHDbVthIq)k6j8V8MfGzds5Qi3Kr1gkhCK63Suhnt2IwEAz(2pBMvmggLJ)2iZ5kMFBHPgV(iuEGC6ZWCAgMrZWuMpOGQ(5uD91zwdHuYe6Xz1kyNqMeLowxTwA8SMCgD720uPZvsL5lzsxuJzPXKTakWPkzfMwdHClizvYYVYj0)y2ruvHcBv3sIDOWrURWQLoubnvNNBogQ41rTM9nLvz906Rp7CBg0ZWxBLwJjNTL)9CB8m6wEGP7Xjj2RWrogspil(DGDY32B0TyN31zBJfYC(hoKqIubf5lYzEzuc6kvr2d6wOxf(iv81H3nOYRKekExV6m4ug2lxFe5ncGhxQnJeUKg3ICbPqB)N(13HQBxtQ1(xF3j9ntc82YAlL0ziugS36YhU5Dzfz)v2X0XU5leHxoyANslgLw)iHW3hJsvNSIFaxxegc4)RVRe4)0tEXR5RuUM3cCICWM5fAAFFueEhuVrc9WBXvJrF8NBT(c9Uy1J9o0ia3Yy5IXjn8yJ92UffpEH9ZQkI2uFEJvptRySuHIvkJM68243u(4I9jnV9O3dorzmDruc9Zos)UYqNEo(R(bLSSXbnhTI)JodBMsV(wF8oqRtJ3WEt2OOhXVchxWEye7irBWBl9aOXlFynqAY7437NZ(FQcZkTsm56bsIcdginqeS6sqLfB(KO0ly1PKPnFhkH6JDtl3Zy1ZTK3nk9YsbBoRtj)kE9XcQUAFXInGlHwKZfiRD(rsnQwsnQwsT0pQv7JF3Jc9CDv5dx0UL(3cB8Pcm1o30Ack9hExmVKgjmAthkTT9OpAk5JMsmE)BkPXs8BUBLtv7)RTrLZ3j0P6x5e9502Ms(n0bsnn6GVGnLOU2hppAnIdzCKcwndjH7HcX8FIo4r78c3sbANLN)AwAq23Qefh5VY1212ik(EiIoC18d4DSNPpXc(hm9i)54wX4jMjIHXMyxSjMfg5uvqlmb7fUcn2FZg)v7dWhy4G51Gw13ImIxUCVpNkeQ(rbE(WOnfhl8FiI3tWU2(pauzn63fyxRTyh8BFdwVjoo)r6IE3fVNQxDJMgL2s0(AEprFLu1Uv4r(L95DVWFL8QyRP4lzxGOLxa(gE2Wy51HyKxhwwQGFfESTGBaGnLqttnWTb)gaqJ3j0S86WV0RhylVC4)CkeTuXJZMZzfxxyWgWIgUuZVLb8zDG3TaeRKxMcLxTVOQ7YHwxEKOwbeShb91tbB3tSxNRI1k4qUkQOpg7YVkOqF(C3fGK9zdRL3KmGxSCTNeujzM)loAxU045b3uoy(mr8fX(BdRm1HJhCfqiFe(DVSzNBcdAnN1(fw0rlcaMz2(Oah6M5pkW5JcC(FZcCQ5)Rkknhk6fgeOfkedDUnV)L7)jk4lCufCbeO5qp8fvf(Jm3qjiH2aapR(H(QhIN1MuVb4CEHGV3XG7mfQMvNHNdMKSjZLw7RalZ3uqw29DzkL9h3)5</textarea>
-    </div>
+  <div class="profile-container">
+    <div class="profile-row">
+      <div class="card neutral">
+        <h2>BCDM Profile</h2>
+        <button onclick="copyText('bcdm', this)">Copy</button>
+        <textarea id="bcdm">!BCDM_TV163PPYw8)IAwkIg8JGIkRIGxatApFGwIoQSkbYfgpPMp0)2p7zgEmGGsEutp3BwnnLh7zV3ZE2Z(XWV6211X1(H4On(biYLJ8sWkEXKlvd9UlaT2vX1wXB1p2ghTpC9OOGO9KxB01DIOuNEs9goOJqFbP(cdD38P(9DneA8n9A8nIegIDT19oeThZ4VTJ5cc3SxI9d8XhgfffSo6XWB8rpIIjCZwX0XXCoD4DCn67ozGOGuxjXRL6mqy4GUxdSxSpHXtI9UhzJJ9WEGumV11(w)14Da)hibtB60s5WOaVKeYmEUhE1okfMBKdxTlk29ox7zi)T7WWy6FfiCh0pXz2mh)7P2VjrHyB)NqG(luz2yPnDMdD(KEvpxJp1lv3Xz6aJyYpc0F3JzyG3B)akiWW7SYrxDctmSl6r)jtiZ9(5ODEXERWO4e2GpJCHbPTkkSIhrQezYGyEJIrxepeqwBdIUZlGOqltqtP3Si1dgwJk9aQ5YEmAJ3(amZiZ8HM7f6Tfr9ZLxV2h7hf6fmAFco6EYZ(mc9GCYdOvylp4DKzmXiK6Y0tQIjFKQHJQf1OByAOsDnZEwMRjZ(FSB404OhX7g7hdcd0ImVdy52BLF4wk)jYoZ3JiCY9Sv)EmN393hMqKqUp5j8py7zk8glDFpQ2ksErBDjtiYB2s6SLO3lTUr7gzDxQFXCzRpd)YWEM2c2tuuLTDMd)v16R0Nap7wzllnt6WNSm9X2YwZTzxTWY0rDKJMPr2aSmNUuLqU5shD5BthGn5hnd5CkbLrXrx1jxqZLNsh2enlvgftSmTDYe4izd1msxyPPsFJ9mt9uvYEM8yZuPnwZEK2cDTIraVfMPKrybJ00Itpu1vNd(dzwfvJzYgJOpkxZmn(mzOZ1SDUvv(gQXKyUSuVLzTy3FRMX4BL1)C69mJNU5i6GLNmrxRWqzpg0dRLLEaihtDZP5we6tkw9Ur1yQkr3y0pt(gZrzd9gZLwfIDSQSZSpBqDBGbQOBAo(it6sJCJhziwl1gxR9zIQvMTrrwVq(txkBnwtoFDh0b2mNOoGvHJflaMQADd3tKxoLA05DCwaCFSw6IKJLMYYc6lwNpYHJo2POqumlWtwyK8uaNAJc)MX(nh5i7Y8TG0ag2R8cqkhY3XFh5HK7(RiiuLrNRaMm2pHeywEFSN5FJId8oKgi8r3YrTDo8aeoCH)prbG5zpoAfK6IqZKy0)DpkC1bchf6NkwMgctT6Nz5jT)I5Mnjii20Na6x4fJ9xfGizxGasFL7DelBC0kIaTXazYH(3tuR8Xd0pgMe04GTu2FTyS4SPgWFND(R(rikjHYhD)qI(0VMjAlerPPNokClTSbWtnkEnIwxqLjPYEmMLXSfCVKg1vOpZxJX7uNgQNpDvKUig7h(deMFP9UFlzSM0xSJyVUd7d5HfHSYDizI7X05ZMfJwyWzsCLotijqmeefe7iqMu(jYap(B6CnGQZAHRr)0TiPtrIrMDx5a40HcXPssHUfbJUNMEYTvPZ5z6LnhA7TLWmkjpJlUCE)gmeNzbyM)A0FHIJiLeUf2Ha(r27IEKiP)ZEpsn3P(4kVa3h6osIA(rvvpppIpQQ6JQQ()NQQibBCBvWH)TeJMnB)xs0zL9B2KEGpxUt5jB1R0rAWvN6l90no36yEXLTwCVYdTbNFmt9GYNo(yMoYnA5cUtzsSSpFnNjv1v(SZdJFLNEkA5l7DVIUc8h2r6q8cPz8kTJq4SrfekTNPrFfLrJN)nBeq5AV4dlIEeft85jwhgnIUtK62zG41d7jmuyW1cSIDzMmrQfBeSZfggvrVRWf(moNSGmSIMl1f45DCutsar6ZA4K3UiEw7Iyj7Iy9vWuTv02fVSxl86tTvZII9FcKNxqaTH0w347NeUoTnO0t(9ipJbNZcqOGZZyGB9NSCUnUfNTmSVVtZtUlQbMABkDCeeYPBGk7LtFI5s9uobT8oKYSoxbUivAefY7pDkTmakPCcTZv9hMtNX15mRVukZ6Nr31C01DqoHDtPlJSHsCIfuVVnXsMwvHDbVthIq)k6j8V8MfGzds5Qi3Kr1gkhCK63Suhnt2IwEAz(2pBMvmggLJ)2iZ5kMFBHPgV(iuEGC6ZWCAgMrZWuMpOGQ(5uD91zwdHuYe6Xz1kyNqMeLowxTwA8SMCgD720uPZvsL5lzsxuJzPXKTakWPkzfMwdHClizvYYVYj0)y2ruvHcBv3sIDOWrURWQLoubnvNNBogQ41rTM9nLvz906Rp7CBg0ZWxBLwJjNTL)9CB8m6wEGP7Xjj2RWrogspil(DGDY32B0TyN31zBJfYC(hoKqIubf5lYzEzuc6kvr2d6wOxf(iv81H3nOYRKekExV6m4ug2lxFe5ncGhxQnJeUKg3ICbPqB)N(13HQBxtQ1(xF3j9ntc82YAlL0ziugS36YhU5Dzfz)v2X0XU5leHxoyANslgLw)iHW3hJsvNSIFaxxegc4)RVRe4)0tEXR5RuUM3cCICWM5fAAFFueEhuVrc9WBXvJrF8NBT(c9Uy1J9o0ia3Yy5IXjn8yJ92UffpEH9ZQkI2uFEJvptRySuHIvkJM68243u(4I9jnV9O3dorzmDruc9Zos)UYqNEo(R(bLSSXbnhTI)JodBMsV(wF8oqRtJ3WEt2OOhXVchxWEye7irBWBl9aOXlFynqAY7437NZ(FQcZkTsm56bsIcdginqeS6sqLfB(KO0ly1PKPnFhkH6JDtl3Zy1ZTK3nk9YsbBoRtj)kE9XcQUAFXInGlHwKZfiRD(rsnQwsnQwsT0pQv7JF3Jc9CDv5dx0UL(3cB8Pcm1o30Ack9hExmVKgjmAthkTT9OpAk5JMsmE)BkPXs8BUBLtv7)RTrLZ3j0P6x5e9502Ms(n0bsnn6GVGnLOU2hppAnIdzCKcwndjH7HcX8FIo4r78c3sbANLN)AwAq23Qefh5VY1212ik(EiIoC18d4DSNPpXc(hm9i)54wX4jMjIHXMyxSjMfg5uvqlmb7fUcn2FZg)v7dWhy4G51Gw13ImIxUCVpNkeQ(rbE(WOnfhl8FiI3tWU2(pauzn63fyxRTyh8BFdwVjoo)r6IE3fVNQxDJMgL2s0(AEprFLu1Uv4r(L95DVWFL8QyRP4lzxGOLxa(gE2Wy51HyKxhwwQGFfESTGBaGnLqttnWTb)gaqJ3j0S86WV0RhylVC4)CkeTuXJZMZzfxxyWgWIgUuZVLb8zDG3TaeRKxMcLxTVOQ7YHwxEKOwbeShb91tbB3tSxNRI1k4qUkQOpg7YVkOqF(C3fGK9zdRL3KmGxSCTNeujzM)loAxU045b3uoy(mr8fX(BdRm1HJhCfqiFe(DVSzNBcdAnN1(fw0rlcaMz2(Oah6M5pkW5JcC(FZcCQ5)Rkknhk6fgeOfkedDUnV)L7)jk4lCufCbeO5qp8fvf(Jm3qjiH2aapR(H(QhIN1MuVb4CEHGV3XG7mfQMvNHNdMKSjZLw7RalZ3uqw29DzkL9h3)5</textarea>
+      </div>
 
-    <!-- Raider.io & WCL Card -->
-    <div class="card neutral">
-      <h2>Profiles</h2>
-      <button onclick="openLink('raiderio')">Raider.io</button>
-      <button onclick="openLink('wcl')">WarcraftLogs</button>
-    </div>
+      <div class="card neutral">
+        <h2>Profiles</h2>
+        <button onclick="openLink('raiderio')">Raider.io</button>
+        <button onclick="openLink('wcl')">WarcraftLogs</button>
+      </div>
 
-    <div class="card neutral">
-      <h2>Platynator Profile</h2>
-      <button onclick="copyText('plat', this)">Copy</button>
-      <textarea id="plat">{"stack_region_scale_x":1,"kind":"profile","version":1,"style":"nat","obscured_alpha":0.4,"designs_enabled":{"pvpInstance":false,"combat":false,"pvpWorld":false},"mouseover_alpha":1,"closer_to_screen_edges":true,"show_nameplates":{"friendlyMinion":true,"enemyMinor":true,"friendlyPlayer":true,"enemy":true,"enemyMinion":true,"friendlyNPC":true},"cast_scale":1.51,"simplified_nameplates":{"minor":false,"minion":false,"instancesNormal":false},"stacking_nameplates":{"friend":false,"enemy":true},"designs_assigned":{"enemySimplifiedCombat":"_hare_simplified","enemyPvPPlayer":"_deer","enemyCombat":"_deer","friendCombat":"_name-only","friendPvPPlayer":"_name-only","friend":"_name-only","enemySimplified":"_hare_simplified","enemy":"nat"},"target_scale":1.25,"simplified_scale":0.4,"blizzard_widget_scale":1.2,"show_friendly_in_instances_1":"never","click_region_scale_y":1,"addon":"Platynator","apply_cvars":true,"current_skin":"blizzard","not_target_alpha":1,"designs":{"_custom":{"highlights":[{"color":{"a":1,"b":0.6,"g":0.6,"r":0.6},"layer":0,"asset":"Platy: Soft Glow","width":1.066,"scale":1,"height":1.544,"kind":"target","anchor":[],"sliced":true}],"specialBars":[{"filled":"normal/soft-full","blank":"normal/soft-faded","anchor":[0,-7],"kind":"power","scale":0.6,"layer":3}],"scale":1,"auras":[{"direction":"RIGHT","scale":1,"showCountdown":true,"sorting":{"reversed":false,"kind":"duration"},"showPandemic":true,"showDispel":[],"anchor":["BOTTOMLEFT",-63,25],"height":1,"kind":"debuffs","textScale":1,"filters":{"fromYou":true,"important":true}},{"direction":"LEFT","scale":1,"showCountdown":true,"sorting":{"reversed":false,"kind":"duration"},"height":1,"showDispel":{"enrage":true},"anchor":["RIGHT",-68,0],"kind":"buffs","textScale":1,"filters":{"dispelable":false,"important":true,"defensive":false}},{"direction":"RIGHT","scale":1,"showCountdown":true,"sorting":{"reversed":false,"kind":"duration"},"height":1,"showDispel":[],"anchor":["LEFT",68,0],"kind":"crowdControl","textScale":1,"filters":{"fromYou":false}}],"font":{"outline":true,"shadow":true,"asset":"RobotoCondensed-Bold","slug":true},"version":1,"bars":[{"relativeTo":0,"animate":false,"marker":{"asset":"wide/glow"},"layer":1,"border":{"color":{"a":1,"b":0.5019607843137255,"g":0.5019607843137255,"r":0.5019607843137255},"height":1,"asset":"Platy: Soft","width":1},"autoColors":[{"colors":[],"kind":"classColors"},{"colors":{"tapped":{"r":0.4313725490196079,"g":0.4313725490196079,"b":0.4313725490196079}},"kind":"tapped"},{"combatOnly":true,"colors":{"warning":{"b":0,"g":0,"r":0.8},"transition":{"b":0,"g":0.6274509803921569,"r":1},"offtank":{"b":0.7843137254901961,"g":0.6666666666666666,"r":0.05882352941176471},"safe":{"b":0.9019607843137256,"g":0.5882352941176471,"r":0.05882352941176471}},"kind":"threat","useSafeColor":true,"instancesOnly":false},{"colors":{"neutral":{"b":0,"g":1,"r":1},"hostile":{"b":0,"g":0,"r":1},"friendly":{"b":0,"g":1,"r":0},"unfriendly":{"r":1,"g":0.5058823529411765,"b":0}},"kind":"reaction"}],"scale":1,"background":{"color":{"a":1,"b":1,"g":1,"r":1},"applyColor":true,"asset":"Platy: Bevelled Grey"},"foreground":{"asset":"Platy: Bevelled"},"kind":"health","anchor":[],"absorb":{"color":{"a":1,"r":1,"g":1,"b":1},"asset":"Platy: Absorb Wide"}},{"scale":1,"layer":1,"border":{"color":{"a":1,"b":0.6666666666666666,"g":0.6666666666666666,"r":0.6666666666666666},"height":1,"asset":"Platy: Soft","width":1},"autoColors":[{"colors":{"cast":{"b":0.1529411764705883,"g":0.09411764705882353,"r":1},"channel":{"b":1,"g":0.2627450980392157,"r":0.0392156862745098}},"kind":"importantCast"},{"colors":{"uninterruptable":{"b":0.7647058823529411,"g":0.7529411764705882,"r":0.5137254901960784}},"kind":"uninterruptableCast"},{"colors":{"empowered":{"r":0.0196078431372549,"g":0.7764705882352941,"b":0.4},"cast":{"b":0,"g":0.5490196078431373,"r":0.9882352941176472},"interrupted":{"b":0.8784313725490196,"g":0.211764705882353,"r":0.9882352941176472},"channel":{"b":0.2156862745098039,"g":0.7764705882352941,"r":0.2431372549019608}},"kind":"cast"}],"marker":{"asset":"wide/glow"},"background":{"color":{"a":1,"b":1,"g":1,"r":1},"applyColor":true,"asset":"Platy: Bevelled Grey"},"anchor":["TOP",0,-9],"kind":"cast","foreground":{"asset":"Platy: Bevelled"},"interruptMarker":{"asset":"none","color":{"b":1,"g":1,"r":1}}}],"markers":[{"scale":0.8,"color":{"b":1,"g":1,"r":1},"anchor":["RIGHT",-64,0],"layer":3,"asset":"normal/quest-boss-blizzard","kind":"quest"},{"scale":0.5,"color":{"b":0.4980392156862745,"g":0.4823529411764706,"r":0.3921568627450981},"anchor":["TOPRIGHT",-50,-12],"layer":3,"asset":"normal/shield-soft","kind":"cannotInterrupt"},{"openWorldOnly":false,"scale":0.8,"layer":3,"anchor":["LEFT",-61,0],"kind":"elite","asset":"special/blizzard-elite-midnight","color":{"b":1,"g":1,"r":1}},{"scale":1,"color":{"b":1,"g":1,"r":1},"anchor":["BOTTOM",0,20],"layer":3,"asset":"normal/blizzard-raid","kind":"raid"}],"texts":[{"displayTypes":["percentage"],"color":{"b":1,"g":1,"r":1},"layer":2,"formatMultiple":"%s (%s)","maxWidth":0,"showPercentSymbol":true,"scale":0.98,"align":"CENTER","anchor":[],"kind":"health","significantFigures":0,"truncate":false},{"showWhenWowDoes":false,"truncate":false,"scale":1.1,"layer":2,"maxWidth":0.99,"autoColors":[],"anchor":["BOTTOM",0,9],"kind":"creatureName","color":{"b":1,"g":1,"r":1},"align":"CENTER"},{"color":{"b":1,"g":1,"r":1},"scale":1,"layer":2,"truncate":false,"anchor":["TOP",0,-12],"kind":"castSpellName","align":"CENTER","maxWidth":0}]},"nat":{"highlights":[{"scale":1,"layer":2,"asset":"Platy: Arrow Solid Down","width":1,"anchor":["BOTTOM",0,8.5],"height":1,"kind":"target","color":{"a":1,"b":1,"g":1,"r":1},"sliced":false},{"scale":1,"layer":0,"asset":"Platy: 7px","width":1,"color":{"a":1,"b":0.9215686917304992,"g":0.3725490272045136,"r":0.6941176652908325},"height":1,"anchor":[],"kind":"mouseover","sliced":true,"includeTarget":true},{"color":{"a":1,"r":1,"g":1,"b":1},"layer":3,"asset":"Platy: 7px","width":1.01,"autoColors":[{"colors":{"cast":{"a":1,"r":1,"g":0.09411764705882352,"b":0.1529411764705883},"channel":{"a":1,"r":0.0392156862745098,"g":0.2627450980392157,"b":1}},"kind":"importantCast"}],"scale":1,"anchor":["TOP",0,-8.5],"kind":"automatic","height":1.05,"sliced":true}],"specialBars":[],"scale":1.29,"auras":[{"direction":"RIGHT","scale":0.77,"showCountdown":true,"sorting":{"kind":"duration","reversed":false},"showPandemic":true,"showDispel":[],"anchor":["BOTTOMLEFT",-63.5,8],"height":1,"kind":"debuffs","textScale":1.01,"filters":{"important":true,"fromYou":true}},{"direction":"LEFT","scale":1,"showCountdown":true,"sorting":{"kind":"duration","reversed":false},"textScale":1,"showDispel":{"enrage":true},"height":1,"kind":"buffs","anchor":["LEFT",-98,0],"filters":{"dispelable":false,"important":true,"defensive":false}},{"direction":"RIGHT","scale":1,"showCountdown":true,"sorting":{"kind":"duration","reversed":false},"textScale":1,"showDispel":[],"height":1,"kind":"crowdControl","anchor":["RIGHT",101,0],"filters":{"fromYou":false}}],"font":{"outline":true,"shadow":true,"asset":"Roboto Condensed Bold","slug":true},"version":1,"bars":[{"absorb":{"color":{"a":1,"r":1,"g":1,"b":1},"asset":"Platy: Absorb Wide"},"animate":false,"marker":{"asset":"wide/glow"},"layer":1,"border":{"height":1,"color":{"a":1,"b":0.2274509966373444,"g":0.2431372702121735,"r":0.1607843190431595},"asset":"Platy: 4px","width":1},"autoColors":[{"colors":{"tapped":{"b":0.4313725490196079,"g":0.4313725490196079,"r":0.4313725490196079}},"kind":"tapped"},{"combatOnly":true,"colors":{"offtank":{"b":0.7843137254901961,"g":0.6666666666666666,"r":0.05882352941176471},"warning":{"r":0.8,"g":0,"b":0},"safe":{"b":0.9019607843137256,"g":0.5882352941176471,"r":0.05882352941176471},"transition":{"b":0,"g":0.6274509803921569,"r":1}},"kind":"threat","instancesOnly":false,"useSafeColor":false},{"colors":{"neutral":{"r":1,"g":0.9254901960784314,"b":0.2901960784313726},"hostile":{"r":1,"g":0.4823529720306397,"b":0.3725490272045136},"friendly":{"b":0,"g":1,"r":0.8784313725490196}},"kind":"quest"},{"kind":"eliteType","colors":{"boss":{"r":0,"g":1,"b":0.9764706492424012},"melee":{"b":0.9882352941176472,"g":0.9882352941176472,"r":0.9882352941176472},"caster":{"b":0.7372549019607844,"g":0.4549019607843137,"r":0},"trivial":{"b":0.3333333333333333,"g":0.5568627450980392,"r":0.6980392156862745},"miniboss":{"r":0.4745098352432251,"g":0,"b":0.615686297416687}},"instancesOnly":true},{"colors":[],"kind":"classColors"},{"colors":{"unfriendly":{"r":1,"g":0.5058823529411765,"b":0},"friendly":{"b":0,"g":1,"r":0},"hostile":{"b":0,"g":0,"r":1},"neutral":{"b":0,"g":1,"r":1}},"kind":"reaction"}],"scale":1,"kind":"health","anchor":[],"background":{"color":{"a":1,"r":1,"g":1,"b":1},"applyColor":true,"asset":"Platy: Solid Black"},"foreground":{"asset":"Platy: Fade Bottom"},"relativeTo":0},{"marker":{"asset":"wide/glow"},"layer":2,"border":{"height":1,"color":{"a":1,"b":0.2274509966373444,"g":0.2431372702121735,"r":0.1607843190431595},"asset":"Platy: 4px","width":1},"autoColors":[{"colors":{"notReady":{"b":0,"g":0,"r":1},"ready":{"b":0,"g":1,"r":0}},"kind":"interruptReady"},{"colors":{"uninterruptable":{"b":0.8196079134941101,"g":0.05490196496248245,"r":0}},"kind":"uninterruptableCast"},{"colors":{"empowered":{"r":0.0196078431372549,"g":0.7764705882352941,"b":0.4},"cast":{"b":0,"g":0.5490196078431373,"r":0.9882352941176472},"interrupted":{"b":0.8784313725490196,"g":0.211764705882353,"r":0.9882352941176472},"channel":{"r":0.5686274766921997,"g":0.7764706611633301,"b":0.3607843220233917}},"kind":"cast"}],"scale":1,"kind":"cast","foreground":{"asset":"Platy: Fade Bottom"},"background":{"color":{"a":1,"r":1,"g":1,"b":1},"applyColor":true,"asset":"Platy: Solid Black"},"anchor":["TOP",0,-9],"interruptMarker":{"color":{"r":1,"g":1,"b":1},"asset":"none"}}],"markers":[{"color":{"b":0.4980392156862745,"g":0.4823529411764706,"r":0.3921568627450981},"scale":0.5,"anchor":["TOPLEFT",-60,-11.5],"layer":3,"asset":"normal/shield-soft","kind":"cannotInterrupt"},{"openWorldOnly":true,"scale":0.8,"layer":3,"color":{"b":1,"g":1,"r":1},"kind":"elite","asset":"special/blizzard-elite-midnight","anchor":["TOPRIGHT",69.5,1]},{"color":{"b":1,"g":1,"r":1},"scale":1,"anchor":["BOTTOM",0,27],"layer":2,"asset":"normal/blizzard-raid","kind":"raid"},{"square":false,"color":{"b":1,"g":1,"r":1},"layer":3,"anchor":["TOPLEFT",-78,-10],"kind":"castIcon","asset":"normal/cast-icon","scale":1},{"scale":0.84,"layer":3,"includeElites":false,"color":{"b":1,"g":1,"r":1},"kind":"rare","asset":"normal/blizzard-rare-midnight","anchor":["BOTTOMRIGHT",70.5,0]}],"texts":[{"showWhenWowDoes":false,"truncate":true,"color":{"b":1,"g":1,"r":1},"layer":2,"maxWidth":0.49,"autoColors":[],"anchor":["LEFT",-61,0],"kind":"creatureName","align":"CENTER","scale":0.83},{"truncate":false,"align":"RIGHT","layer":2,"formatMultiple":"%s (%s)","maxWidth":0,"showPercentSymbol":true,"scale":0.76,"displayTypes":["absolute","percentage"],"anchor":["RIGHT",62,0],"kind":"health","significantFigures":4,"color":{"b":1,"g":1,"r":1}},{"truncate":true,"color":{"b":1,"g":1,"r":1},"layer":2,"maxWidth":0.4,"colors":{"npc":{"neutral":{"b":0,"g":1,"r":1},"tapped":{"b":0.4313725490196079,"g":0.4313725490196079,"r":0.4313725490196079},"hostile":{"b":0,"g":0,"r":1},"friendly":{"b":0,"g":1,"r":0}}},"anchor":["TOPLEFT",-49,-12],"kind":"castSpellName","align":"LEFT","scale":0.8},{"truncate":true,"align":"RIGHT","layer":2,"maxWidth":1,"color":{"r":1,"g":1,"b":1},"anchor":["TOPRIGHT",61.5,-25.5],"kind":"castInterrupter","scale":1,"applyClassColors":true},{"truncate":true,"align":"RIGHT","layer":2,"maxWidth":1,"color":{"r":1,"g":1,"b":1},"anchor":["TOPRIGHT",61.5,-25.5],"kind":"castTarget","scale":1,"applyClassColors":true},{"color":{"r":1,"g":1,"b":1},"anchor":["TOPRIGHT",59,-11.5],"kind":"castTimeLeft","truncate":false,"align":"RIGHT","layer":2,"scale":1,"maxWidth":0}]}},"global_scale":1.16,"show_nameplates_only_needed":false,"click_region_scale_x":1,"stack_region_scale_y":2.5,"clickable_nameplates":{"friend":false,"enemy":true},"design_all":[],"cast_alpha":1}</textarea>
+      <div class="card neutral">
+        <h2>Platynator Profile</h2>
+        <button onclick="copyText('plat', this)">Copy</button>
+        <textarea id="plat">{"stack_region_scale_x":1,"kind":"profile","version":1,"style":"nat","obscured_alpha":0.4,"designs_enabled":{"pvpInstance":false,"combat":false,"pvpWorld":false},"mouseover_alpha":1,"closer_to_screen_edges":true,"show_nameplates":{"friendlyMinion":true,"enemyMinor":true,"friendlyPlayer":true,"enemy":true,"enemyMinion":true,"friendlyNPC":true},"cast_scale":1.51,"simplified_nameplates":{"minor":false,"minion":false,"instancesNormal":false},"stacking_nameplates":{"friend":false,"enemy":true},"designs_assigned":{"enemySimplifiedCombat":"_hare_simplified","enemyPvPPlayer":"_deer","enemyCombat":"_deer","friendCombat":"_name-only","friendPvPPlayer":"_name-only","friend":"_name-only","enemySimplified":"_hare_simplified","enemy":"nat"},"target_scale":1.25,"simplified_scale":0.4,"blizzard_widget_scale":1.2,"show_friendly_in_instances_1":"never","click_region_scale_y":1,"addon":"Platynator","apply_cvars":true,"current_skin":"blizzard","not_target_alpha":1,"designs":{"_custom":{"highlights":[{"color":{"a":1,"b":0.6,"g":0.6,"r":0.6},"layer":0,"asset":"Platy: Soft Glow","width":1.066,"scale":1,"height":1.544,"kind":"target","anchor":[],"sliced":true}],"specialBars":[{"filled":"normal/soft-full","blank":"normal/soft-faded","anchor":[0,-7],"kind":"power","scale":0.6,"layer":3}],"scale":1,"auras":[{"direction":"RIGHT","scale":1,"showCountdown":true,"sorting":{"reversed":false,"kind":"duration"},"showPandemic":true,"showDispel":[],"anchor":["BOTTOMLEFT",-63,25],"height":1,"kind":"debuffs","textScale":1,"filters":{"fromYou":true,"important":true}},{"direction":"LEFT","scale":1,"showCountdown":true,"sorting":{"reversed":false,"kind":"duration"},"height":1,"showDispel":{"enrage":true},"anchor":["RIGHT",-68,0],"kind":"buffs","textScale":1,"filters":{"dispelable":false,"important":true,"defensive":false}},{"direction":"RIGHT","scale":1,"showCountdown":true,"sorting":{"reversed":false,"kind":"duration"},"height":1,"showDispel":[],"anchor":["LEFT",68,0],"kind":"crowdControl","textScale":1,"filters":{"fromYou":false}}],"font":{"outline":true,"shadow":true,"asset":"RobotoCondensed-Bold","slug":true},"version":1,"bars":[{"relativeTo":0,"animate":false,"marker":{"asset":"wide/glow"},"layer":1,"border":{"color":{"a":1,"b":0.5019607843137255,"g":0.5019607843137255,"r":0.5019607843137255},"height":1,"asset":"Platy: Soft","width":1},"autoColors":[{"colors":[],"kind":"classColors"},{"colors":{"tapped":{"r":0.4313725490196079,"g":0.4313725490196079,"b":0.4313725490196079}},"kind":"tapped"},{"combatOnly":true,"colors":{"warning":{"b":0,"g":0,"r":0.8},"transition":{"b":0,"g":0.6274509803921569,"r":1},"offtank":{"b":0.7843137254901961,"g":0.6666666666666666,"r":0.05882352941176471},"safe":{"b":0.9019607843137256,"g":0.5882352941176471,"r":0.05882352941176471}},"kind":"threat","useSafeColor":true,"instancesOnly":false},{"colors":{"neutral":{"b":0,"g":1,"r":1},"hostile":{"b":0,"g":0,"r":1},"friendly":{"b":0,"g":1,"r":0},"unfriendly":{"r":1,"g":0.5058823529411765,"b":0}},"kind":"reaction"}],"scale":1,"background":{"color":{"a":1,"b":1,"g":1,"r":1},"applyColor":true,"asset":"Platy: Bevelled Grey"},"foreground":{"asset":"Platy: Bevelled"},"kind":"health","anchor":[],"absorb":{"color":{"a":1,"r":1,"g":1,"b":1},"asset":"Platy: Absorb Wide"}},{"scale":1,"layer":1,"border":{"color":{"a":1,"b":0.6666666666666666,"g":0.6666666666666666,"r":0.6666666666666666},"height":1,"asset":"Platy: Soft","width":1},"autoColors":[{"colors":{"cast":{"b":0.1529411764705883,"g":0.09411764705882353,"r":1},"channel":{"b":1,"g":0.2627450980392157,"r":0.0392156862745098}},"kind":"importantCast"},{"colors":{"uninterruptable":{"b":0.7647058823529411,"g":0.7529411764705882,"r":0.5137254901960784}},"kind":"uninterruptableCast"},{"colors":{"empowered":{"r":0.0196078431372549,"g":0.7764705882352941,"b":0.4},"cast":{"b":0,"g":0.5490196078431373,"r":0.9882352941176472},"interrupted":{"b":0.8784313725490196,"g":0.211764705882353,"r":0.9882352941176472},"channel":{"b":0.2156862745098039,"g":0.7764705882352941,"r":0.2431372549019608}},"kind":"cast"}],"marker":{"asset":"wide/glow"},"background":{"color":{"a":1,"b":1,"g":1,"r":1},"applyColor":true,"asset":"Platy: Bevelled Grey"},"anchor":["TOP",0,-9],"kind":"cast","foreground":{"asset":"Platy: Bevelled"},"interruptMarker":{"asset":"none","color":{"b":1,"g":1,"r":1}}}],"markers":[{"scale":0.8,"color":{"b":1,"g":1,"r":1},"anchor":["RIGHT",-64,0],"layer":3,"asset":"normal/quest-boss-blizzard","kind":"quest"},{"scale":0.5,"color":{"b":0.4980392156862745,"g":0.4823529411764706,"r":0.3921568627450981},"anchor":["TOPRIGHT",-50,-12],"layer":3,"asset":"normal/shield-soft","kind":"cannotInterrupt"},{"openWorldOnly":false,"scale":0.8,"layer":3,"anchor":["LEFT",-61,0],"kind":"elite","asset":"special/blizzard-elite-midnight","color":{"b":1,"g":1,"r":1}},{"scale":1,"color":{"b":1,"g":1,"r":1},"anchor":["BOTTOM",0,20],"layer":3,"asset":"normal/blizzard-raid","kind":"raid"}],"texts":[{"displayTypes":["percentage"],"color":{"b":1,"g":1,"r":1},"layer":2,"formatMultiple":"%s (%s)","maxWidth":0,"showPercentSymbol":true,"scale":0.98,"align":"CENTER","anchor":[],"kind":"health","significantFigures":0,"truncate":false},{"showWhenWowDoes":false,"truncate":false,"scale":1.1,"layer":2,"maxWidth":0.99,"autoColors":[],"anchor":["BOTTOM",0,9],"kind":"creatureName","color":{"b":1,"g":1,"r":1},"align":"CENTER"},{"color":{"b":1,"g":1,"r":1},"scale":1,"layer":2,"truncate":false,"anchor":["TOP",0,-12],"kind":"castSpellName","align":"CENTER","maxWidth":0}]},"nat":{"highlights":[{"scale":1,"layer":2,"asset":"Platy: Arrow Solid Down","width":1,"anchor":["BOTTOM",0,8.5],"height":1,"kind":"target","color":{"a":1,"b":1,"g":1,"r":1},"sliced":false},{"scale":1,"layer":0,"asset":"Platy: 7px","width":1,"color":{"a":1,"b":0.9215686917304992,"g":0.3725490272045136,"r":0.6941176652908325},"height":1,"anchor":[],"kind":"mouseover","sliced":true,"includeTarget":true},{"color":{"a":1,"r":1,"g":1,"b":1},"layer":3,"asset":"Platy: 7px","width":1.01,"autoColors":[{"colors":{"cast":{"a":1,"r":1,"g":0.09411764705882352,"b":0.1529411764705883},"channel":{"a":1,"r":0.0392156862745098,"g":0.2627450980392157,"b":1}},"kind":"importantCast"}],"scale":1,"anchor":["TOP",0,-8.5],"kind":"automatic","height":1.05,"sliced":true}],"specialBars":[],"scale":1.29,"auras":[{"direction":"RIGHT","scale":0.77,"showCountdown":true,"sorting":{"kind":"duration","reversed":false},"showPandemic":true,"showDispel":[],"anchor":["BOTTOMLEFT",-63.5,8],"height":1,"kind":"debuffs","textScale":1.01,"filters":{"important":true,"fromYou":true}},{"direction":"LEFT","scale":1,"showCountdown":true,"sorting":{"kind":"duration","reversed":false},"textScale":1,"showDispel":{"enrage":true},"height":1,"kind":"buffs","anchor":["LEFT",-98,0],"filters":{"dispelable":false,"important":true,"defensive":false}},{"direction":"RIGHT","scale":1,"showCountdown":true,"sorting":{"kind":"duration","reversed":false},"textScale":1,"showDispel":[],"height":1,"kind":"crowdControl","anchor":["RIGHT",101,0],"filters":{"fromYou":false}}],"font":{"outline":true,"shadow":true,"asset":"Roboto Condensed Bold","slug":true},"version":1,"bars":[{"absorb":{"color":{"a":1,"r":1,"g":1,"b":1},"asset":"Platy: Absorb Wide"},"animate":false,"marker":{"asset":"wide/glow"},"layer":1,"border":{"height":1,"color":{"a":1,"b":0.2274509966373444,"g":0.2431372702121735,"r":0.1607843190431595},"asset":"Platy: 4px","width":1},"autoColors":[{"colors":{"tapped":{"b":0.4313725490196079,"g":0.4313725490196079,"r":0.4313725490196079}},"kind":"tapped"},{"combatOnly":true,"colors":{"offtank":{"b":0.7843137254901961,"g":0.6666666666666666,"r":0.05882352941176471},"warning":{"r":0.8,"g":0,"b":0},"safe":{"b":0.9019607843137256,"g":0.5882352941176471,"r":0.05882352941176471},"transition":{"b":0,"g":0.6274509803921569,"r":1}},"kind":"threat","instancesOnly":false,"useSafeColor":false},{"colors":{"neutral":{"r":1,"g":0.9254901960784314,"b":0.2901960784313726},"hostile":{"r":1,"g":0.4823529720306397,"b":0.3725490272045136},"friendly":{"b":0,"g":1,"r":0.8784313725490196}},"kind":"quest"},{"kind":"eliteType","colors":{"boss":{"r":0,"g":1,"b":0.9764706492424012},"melee":{"b":0.9882352941176472,"g":0.9882352941176472,"r":0.9882352941176472},"caster":{"b":0.7372549019607844,"g":0.4549019607843137,"r":0},"trivial":{"b":0.3333333333333333,"g":0.5568627450980392,"r":0.6980392156862745},"miniboss":{"r":0.4745098352432251,"g":0,"b":0.615686297416687}},"instancesOnly":true},{"colors":[],"kind":"classColors"},{"colors":{"unfriendly":{"r":1,"g":0.5058823529411765,"b":0},"friendly":{"b":0,"g":1,"r":0},"hostile":{"b":0,"g":0,"r":1},"neutral":{"b":0,"g":1,"r":1}},"kind":"reaction"}],"scale":1,"kind":"health","anchor":[],"background":{"color":{"a":1,"r":1,"g":1,"b":1},"applyColor":true,"asset":"Platy: Solid Black"},"foreground":{"asset":"Platy: Fade Bottom"},"relativeTo":0},{"marker":{"asset":"wide/glow"},"layer":2,"border":{"height":1,"color":{"a":1,"b":0.2274509966373444,"g":0.2431372702121735,"r":0.1607843190431595},"asset":"Platy: 4px","width":1},"autoColors":[{"colors":{"notReady":{"b":0,"g":0,"r":1},"ready":{"b":0,"g":1,"r":0}},"kind":"interruptReady"},{"colors":{"uninterruptable":{"b":0.8196079134941101,"g":0.05490196496248245,"r":0}},"kind":"uninterruptableCast"},{"colors":{"empowered":{"r":0.0196078431372549,"g":0.7764705882352941,"b":0.4},"cast":{"b":0,"g":0.5490196078431373,"r":0.9882352941176472},"interrupted":{"b":0.8784313725490196,"g":0.211764705882353,"r":0.9882352941176472},"channel":{"r":0.5686274766921997,"g":0.7764706611633301,"b":0.3607843220233917}},"kind":"cast"}],"scale":1,"kind":"cast","foreground":{"asset":"Platy: Fade Bottom"},"background":{"color":{"a":1,"r":1,"g":1,"b":1},"applyColor":true,"asset":"Platy: Solid Black"},"anchor":["TOP",0,-9],"interruptMarker":{"color":{"r":1,"g":1,"b":1},"asset":"none"}}],"markers":[{"color":{"b":0.4980392156862745,"g":0.4823529411764706,"r":0.3921568627450981},"scale":0.5,"anchor":["TOPLEFT",-60,-11.5],"layer":3,"asset":"normal/shield-soft","kind":"cannotInterrupt"},{"openWorldOnly":true,"scale":0.8,"layer":3,"color":{"b":1,"g":1,"r":1},"kind":"elite","asset":"special/blizzard-elite-midnight","anchor":["TOPRIGHT",69.5,1]},{"color":{"b":1,"g":1,"r":1},"scale":1,"anchor":["BOTTOM",0,27],"layer":2,"asset":"normal/blizzard-raid","kind":"raid"},{"square":false,"color":{"b":1,"g":1,"r":1},"layer":3,"anchor":["TOPLEFT",-78,-10],"kind":"castIcon","asset":"normal/cast-icon","scale":1},{"scale":0.84,"layer":3,"includeElites":false,"color":{"b":1,"g":1,"r":1},"kind":"rare","asset":"normal/blizzard-rare-midnight","anchor":["BOTTOMRIGHT",70.5,0]}],"texts":[{"showWhenWowDoes":false,"truncate":true,"color":{"b":1,"g":1,"r":1},"layer":2,"maxWidth":0.49,"autoColors":[],"anchor":["LEFT",-61,0],"kind":"creatureName","align":"CENTER","scale":0.83},{"truncate":false,"align":"RIGHT","layer":2,"formatMultiple":"%s (%s)","maxWidth":0,"showPercentSymbol":true,"scale":0.76,"displayTypes":["absolute","percentage"],"anchor":["RIGHT",62,0],"kind":"health","significantFigures":4,"color":{"b":1,"g":1,"r":1}},{"truncate":true,"color":{"b":1,"g":1,"r":1},"layer":2,"maxWidth":0.4,"colors":{"npc":{"neutral":{"b":0,"g":1,"r":1},"tapped":{"b":0.4313725490196079,"g":0.4313725490196079,"r":0.4313725490196079},"hostile":{"b":0,"g":0,"r":1},"friendly":{"b":0,"g":1,"r":0}}},"anchor":["TOPLEFT",-49,-12],"kind":"castSpellName","align":"LEFT","scale":0.8},{"truncate":true,"align":"RIGHT","layer":2,"maxWidth":1,"color":{"r":1,"g":1,"b":1},"anchor":["TOPRIGHT",61.5,-25.5],"kind":"castInterrupter","scale":1,"applyClassColors":true},{"truncate":true,"align":"RIGHT","layer":2,"maxWidth":1,"color":{"r":1,"g":1,"b":1},"anchor":["TOPRIGHT",61.5,-25.5],"kind":"castTarget","scale":1,"applyClassColors":true},{"color":{"r":1,"g":1,"b":1},"anchor":["TOPRIGHT",59,-11.5],"kind":"castTimeLeft","truncate":false,"align":"RIGHT","layer":2,"scale":1,"maxWidth":0}]}},"global_scale":1.16,"show_nameplates_only_needed":false,"click_region_scale_x":1,"stack_region_scale_y":2.5,"clickable_nameplates":{"friend":false,"enemy":true},"design_all":[],"cast_alpha":1}</textarea>
+      </div>
     </div>
   </div>
 
   <!-- M+ and Raid side by side -->
   <div class="two-column">
 
-    <!-- M+ -->
     <div class="column">
       <div class="section-title">M+</div>
 
@@ -162,7 +187,6 @@
       </div>
     </div>
 
-    <!-- Raid -->
     <div class="column">
       <div class="section-title">Raid</div>
 
@@ -175,7 +199,7 @@
       <div class="card dev">
         <h2>Dev Cleave</h2>
         <button onclick="copyText('raid-dev-cleave', this)">Copy</button>
-        <textarea id="raid-dev-cleave">PASTE STRING HERE</textarea>
+        <textarea id="raid-dev-cleave">CsbBPJc41CfcseY0baneJ1IHrBAAAAAAAAAAAzMDMDzwMDMYMTjZmpZMWmxMzMz8AzMzAmxMGzMLzMDMwYwCsMGN2GQmJAbYGMzghB</textarea>
       </div>
 
       <div class="card dev">
@@ -191,13 +215,8 @@
     function copyText(id, btn) {
       var text = document.getElementById(id);
       var value = text.value.trim();
-
       if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(value).then(() => {
-          showCopiedState(btn);
-        }).catch(() => {
-          fallbackCopy(text, btn);
-        });
+        navigator.clipboard.writeText(value).then(() => showCopiedState(btn)).catch(() => fallbackCopy(text, btn));
       } else {
         fallbackCopy(text, btn);
       }
@@ -214,7 +233,6 @@
     function showCopiedState(btn) {
       btn.textContent = "Copied";
       btn.classList.add("copied");
-
       setTimeout(() => {
         btn.textContent = "Copy";
         btn.classList.remove("copied");
@@ -223,13 +241,11 @@
 
     function openLink(type) {
       let url = "";
-
       if (type === "addon") url = "https://www.curseforge.com/wow/addons/scrawutilities";
       if (type === "twitch") url = "https://www.twitch.tv/natrazalth";
       if (type === "youtube") url = "https://www.youtube.com/@natrazalth";
-      if (type === "raiderio") url = "https://raider.io/characters/us/tichondrius/Natrazalth";
-      if (type === "wcl") url = "https://www.warcraftlogs.com/character/us/tichondrius/natrazalth";
-
+      if (type === "raiderio") url = "https://raider.io/characters/your-region/your-realm/your-character";
+      if (type === "wcl") url = "https://www.warcraftlogs.com/character/your-region/your-realm/your-character";
       window.open(url, "_blank");
     }
   </script>
