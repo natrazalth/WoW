@@ -122,26 +122,14 @@
       width: 280px;
       margin: 0px;
     }
-    
-    .two-column {
+  
+    .three-column {
       display: flex;
       justify-content: center;
       gap: 40px;
       align-items: flex-start;
       flex-wrap: wrap;
       margin: 10px;
-    }
-
-    .full-width-center {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin: 10px 0 20px 0;
-    }
-    
-    .macros-card {
-      width: 220px;
-      text-align: center;
     }
     
     .column {
@@ -152,7 +140,19 @@
       max-width: 100%;
       margin: 10px;
     }
-
+  
+    .center-column {
+      width: 220px;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .center-column .card {
+      width: 100%;
+      margin-top: 45px;
+      background: #334155;
+    }
+  
     .modal {
       display: none;
       position: fixed;
@@ -164,7 +164,7 @@
       height: 100%;
       background-color: rgba(0,0,0,0.85);
     }
-
+  
     .modal-content {
       margin: auto;
       display: block;
@@ -172,7 +172,7 @@
       max-height: 80%;
       border-radius: 10px;
     }
-
+  
     .close {
       position: absolute;
       top: 20px;
@@ -224,7 +224,7 @@
     </div>
   </div>
 
-  <div class="two-column">
+  <div class="three-column">
 
     <div class="column">
       <div class="section-title">M+</div>
@@ -242,8 +242,8 @@
       </div>
     </div>
     
-    <div class="full-width-center">
-      <div class="card neutral macros-card">
+    <div class="center-column">
+      <div class="card neutral">
         <h2>Macros</h2>
         <button onclick="openLink('macros')">Open</button>
       </div>
