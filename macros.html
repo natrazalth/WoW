@@ -13,7 +13,23 @@
     }
 
     h1 {
+      margin-bottom: 20px;
+    }
+
+    .back-button {
+      background: #38bdf8;
+      border: none;
+      padding: 8px 16px;
+      color: black;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
       margin-bottom: 30px;
+      transition: 0.2s ease;
+    }
+
+    .back-button:hover {
+      background: #0ea5e9;
     }
 
     .macro-grid {
@@ -83,6 +99,8 @@
 
 <h1>Nat's WoW Macros</h1>
 
+<button class="back-button" onclick="window.location.href='index.html'">← Back to Main Page</button>
+
 <div class="macro-grid">
   <div class="macro-card" onclick="copyMacro('deepbreath')">
     <img src="deepbreath.png" alt="Deep Breath Screenshot">
@@ -99,7 +117,7 @@
     <textarea id="focusinterrupt">#showtooltip Quell
       /cast [@focus, exists] Quell
       /cast [@mouseover, exists] Quell
-      /cast {@target, exists] Quell</textarea>
+      /cast [@target, exists] Quell</textarea>
     <button class="copy-button" onclick="copyMacro('focusinterrupt', event)">Copy</button>
   </div>
 </div>
