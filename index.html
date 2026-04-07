@@ -131,6 +131,18 @@
       flex-wrap: wrap;
       margin: 10px;
     }
+
+    .full-width-center {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 10px 0 20px 0;
+    }
+    
+    .macros-card {
+      width: 220px;
+      text-align: center;
+    }
     
     .column {
       width: 320px;
@@ -201,7 +213,6 @@
         <h2>Profiles</h2>
         <button onclick="openLink('raiderio')">Raider.io</button>
         <button onclick="openLink('wcl')">WarcraftLogs</button>
-        <button onclick="openLink('macros')">Macros</button>
       </div>
 
       <div class="card neutral">
@@ -230,7 +241,14 @@
         <textarea id="mplus-dev">CsbBPJc41CfcseY0baneJ1IHrBAAAAAAAAAAAzMDMDzwMMmBjZaMzMNjxyMmZmZmHYmZGgZmxYmZZMDMwMzwCsMmlGbzMMZmsA2GmBzMAD</textarea>
       </div>
     </div>
-
+    
+    <div class="full-width-center">
+      <div class="card neutral macros-card">
+        <h2>Macros</h2>
+        <button onclick="openLink('macros')">Open</button>
+      </div>
+    </div>
+    
     <div class="column">
       <div class="section-title">Raid</div>
 
