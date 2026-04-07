@@ -125,10 +125,8 @@
   
     .three-column {
       display: flex;
-      justify-content: center;
-      gap: 40px;
+      justify-content: space-between;
       align-items: flex-start;
-      flex-wrap: wrap;
       margin: 10px;
     }
     
@@ -147,10 +145,22 @@
       justify-content: center;
     }
   
-    .center-column .card {
-      width: 100%;
+    .macros-wrapper {
+      background: #1e293b;
+      padding: 3px;
+      border-radius: 10px;
+      display: inline-block;
       margin-top: 45px;
-      background: #334155;
+    }
+  
+    .macros-wrapper:hover {
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.5),
+                  0 0 25px rgba(56, 189, 248, 0.3);
+      transition: 0.2s;
+    }
+  
+    .macros-wrapper button {
+      border-radius: 7px;
     }
   
     .modal {
@@ -243,9 +253,8 @@
     </div>
     
     <div class="center-column">
-      <div class="card neutral">
-        <h2>Macros</h2>
-        <button onclick="openLink('macros')">Open</button>
+      <div class="macros-wrapper">
+        <button onclick="openLink('macros')">Macros</button>
       </div>
     </div>
     
