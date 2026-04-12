@@ -220,6 +220,13 @@
       border-radius: 8px;
       margin-top: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      cursor: zoom-in;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .talent-preview:hover {
+      transform: scale(1.02);
+      opacity: 0.95;
     }
     
     .preview-notes {
@@ -289,7 +296,7 @@
         <textarea id="mplus-cw-pres">CwbBPJc41CfcseY0baneJ1IHrBAAAAAMzMz2yADzMPwsYmZM2GAAAzwYGjxMiZGAAAgZmRzwMzMLzMDAMmZMz2CLWYYmZmGa2MsYYmZGMzMGA</textarea>
 
         <div class="preview-section">
-          <img src="cw-pres-mplus.png" class="talent-preview">
+          <img src="cw-pres-mplus.png" class="talent-preview" onclick="openPreviewImage(this.src)">
           <div class="preview-notes">
             <p><b>Notes:</b></p>
             <ul>
@@ -308,7 +315,7 @@
         <textarea id="sc-dev-aoe">CsbBPJc41CfcseY0baneJ1IHrBAAAAAAAAAAAzMDgZGmhHwMGjZaMzMNDzyMmZmZmZmZGgZmxYmZZMDMwMzwCsMmlGbzMMZmsA2GmBzMAD</textarea>
 
         <div class="preview-section">
-          <img src="sc-dev-aoe.png" class="talent-preview">
+          <img src="sc-dev-aoe.png" class="talent-preview" onclick="openPreviewImage(this.src)">
           <div class="preview-notes">
             <p><b>Notes:</b></p>
             <ul>
@@ -327,7 +334,7 @@
         <textarea id="fs-dev-aoe">CsbBPJc41CfcseY0baneJ1IHrBAAAAAAAAAAAzMDmZMzgBmZGjZaYmJDMmZmhZmZmBMjZMmZWmZGMDMjZgFwWwMMhsBWGmBYmZYA</textarea>
 
         <div class="preview-section">
-          <img src="fs-dev-aoe.png" class="talent-preview">
+          <img src="fs-dev-aoe.png" class="talent-preview" onclick="openPreviewImage(this.src)">
           <div class="preview-notes">
             <p><b>Notes:</b></p>
             <ul>
@@ -357,7 +364,7 @@
         <textarea id="raid-cw-pres">CwbBPJc41CfcseY0baneJ1IHrBAAAAAYmZ2WGYGzMPwsYmZMzywAAAzwYGMmRj5BGAAAgZmRmZmZmZZMDAGYMjNWgBmRDNgFYmZGAGA</textarea>
 
         <div class="preview-section">
-          <img src="cw-pres-raid.png" class="talent-preview">
+          <img src="cw-pres-raid.png" class="talent-preview" onclick="openPreviewImage(this.src)">
           <div class="preview-notes">
             <p><b>Notes:</b></p>
             <ul>
@@ -376,7 +383,7 @@
         <textarea id="raid-dev-cleave">CsbBPJc41CfcseY0baneJ1IHrBAAAAAAAAAAAzMDMDzwMDMYMTjZmpZMWmxMzMz8AzMzAMzMzYmZZMDMwYwCsMGN2GQmJAbYGMzghB</textarea>
 
         <div class="preview-section">
-          <img src="sc-dev-st.png" class="talent-preview">
+          <img src="sc-dev-st.png" class="talent-preview" onclick="openPreviewImage(this.src)">
           <div class="preview-notes">
             <p><b>Notes:</b></p>
             <ul>
@@ -396,7 +403,7 @@
         <textarea id="raid-dev-st">CsbBPJc41CfcseY0baneJ1IHrBAAAAAAAAAAAzMDmZYGMwMzYMTDzMZMWGzMzwMzMzAmxMGzMLzMDmBmxMwCYLYGmQ2ALDzAMzMMA</textarea>
 
         <div class="preview-section">
-          <img src="fs-dev-st.png" class="talent-preview">
+          <img src="fs-dev-st.png" class="talent-preview" onclick="openPreviewImage(this.src)">
           <div class="preview-notes">
             <p><b>Notes:</b></p>
             <ul>
@@ -494,6 +501,15 @@
       const card = btn.closest(".card");
       card.classList.toggle("show-preview");
     }
+    
+    function openPreviewImage(src) {
+      const modal = document.getElementById("imageModal");
+      const img = document.getElementById("modalImg");
+    
+      img.src = src;
+      modal.style.display = "block";
+    }
+    
   </script>
 
 </body>
