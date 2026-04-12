@@ -203,6 +203,36 @@
       font-weight: bold;
       cursor: pointer;
     }
+
+    .preview-section {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+    }
+    
+    .card.show-preview .preview-section {
+      max-height: 500px;
+      margin-top: 10px;
+    }
+    
+    .talent-preview {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+    
+    .preview-notes {
+      text-align: left;
+      font-size: 14px;
+      margin-top: 8px;
+      color: #cbd5f5;
+    }
+    
+    .preview-notes ul {
+      padding-left: 18px;
+      margin: 5px 0;
+    }
   </style>
 </head>
 <body>
@@ -245,52 +275,140 @@
     </div>
   </div>
 
-  <div class="three-column-wrapper">
-    <div class="three-column">
+<div class="three-column-wrapper">
+  <div class="three-column">
 
-      <div class="column">
-        <div class="section-title">M+</div>
-        <div class="card pres">
-          <h2>Pres</h2>
-          <button onclick="copyText('mplus-pres', this)">Copy</button>
-          <textarea id="mplus-pres">CwbBPJc41CfcseY0baneJ1IHrBAAAAAMzMz2yADzMPwsYmZM2GAAAzwYGjxMiZGAAAgZmRzwMzMLzMDAMmZMz2CLWYYmZmGa2MsYYmZGMzMGA</textarea>
-        </div>
-        <div class="card dev">
-          <h2>SC Dev AOE</h2>
-          <button onclick="copyText('sc-dev-aoe', this)">Copy</button>
-          <textarea id="sc-dev-aoe">CsbBPJc41CfcseY0baneJ1IHrBAAAAAAAAAAAzMDgZGmhHwMGjZaMzMNDzyMmZmZmZmZGgZmxYmZZMDMwMzwCsMmlGbzMMZmsA2GmBzMAD</textarea>
-        </div>
-        <div class="card dev">
-          <h2>FS Dev AOE</h2>
-          <button onclick="copyText('fs-dev-aoe', this)">copy</button>
-          <textarea id="fs-dev-aoe">CsbBPJc41CfcseY0baneJ1IHrBAAAAAAAAAAAzMDmZMzgBmZGjZaYmJDMmZmhZmZmBMjZMmZWmZGMDMjZgFwWwMMhsBWGmBYmZYA</textarea>
-        </div>
-      </div>
-      
-      <div class="center-column">
-        <div class="macros-wrapper">
-          <button onclick="openLink('macros')">Macros</button>
+    <div class="column">
+      <div class="section-title">M+</div>
+
+      <!-- M+ PRES -->
+      <div class="card pres">
+        <h2>CW Pres</h2>
+        <button onclick="copyText('mplus-cw-pres', this)">Copy</button>
+        <button onclick="togglePreview(this)">Preview</button>
+        <textarea id="mplus-cw-pres">CwbBPJc41CfcseY0baneJ1IHrBAAAAAMzMz2yADzMPwsYmZM2GAAAzwYGjxMiZGAAAgZmRzwMzMLzMDAMmZMz2CLWYYmZmGa2MsYYmZGMzMGA</textarea>
+
+        <div class="preview-section">
+          <img src="cw-pres-mplus.png" class="talent-preview">
+          <div class="preview-notes">
+            <p><b>Notes:</b></p>
+            <ul>
+              <li>Main M+ healing build</li>
+              <li>Strong sustained output</li>
+            </ul>
+          </div>
         </div>
       </div>
-      
-      <div class="column">
-        <div class="section-title">Raid</div>
-        <div class="card pres">
-          <h2>Pres</h2>
-          <button onclick="copyText('raid-pres', this)">Copy</button>
-          <textarea id="raid-pres">CwbBPJc41CfcseY0baneJ1IHrBAAAAAYmZ2WGYGzMPwsYmZMzywAAAzwYGMmRj5BGAAAgZmRmZmZmZZMDAGYMjNWgBmRDNgFYmZGAGA</textarea>
-        </div>
-        <div class="card dev">
-          <h2>SC Dev Cleave</h2>
-          <button onclick="copyText('raid-dev-cleave', this)">Copy</button>
-          <textarea id="raid-dev-cleave">CsbBPJc41CfcseY0baneJ1IHrBAAAAAAAAAAAzMDMDzwMDMYMTjZmpZMWmxMzMz8AzMzAMzMzYmZZMDMwYwCsMGN2GQmJAbYGMzghB</textarea>
-        </div>
-        <div class="card dev">
-          <h2>FS Dev ST</h2>
-          <button onclick="copyText('raid-dev-st', this)">Copy</button>
-          <textarea id="raid-dev-st">CsbBPJc41CfcseY0baneJ1IHrBAAAAAAAAAAAzMDmZYGMwMzYMTDzMZMWGzMzwMzMzAmxMGzMLzMDmBmxMwCYLYGmQ2ALDzAMzMMA</textarea>
+
+      <!-- SC DEV AOE -->
+      <div class="card dev">
+        <h2>SC Dev AOE</h2>
+        <button onclick="copyText('sc-dev-aoe', this)">Copy</button>
+        <button onclick="togglePreview(this)">Preview</button>
+        <textarea id="sc-dev-aoe">CsbBPJc41CfcseY0baneJ1IHrBAAAAAAAAAAAzMDgZGmhHwMGjZaMzMNDzyMmZmZmZmZGgZmxYmZZMDMwMzwCsMmlGbzMMZmsA2GmBzMAD</textarea>
+
+        <div class="preview-section">
+          <img src="sc-dev-aoe.png" class="talent-preview">
+          <div class="preview-notes">
+            <p><b>Notes:</b></p>
+            <ul>
+              <li>Best for large pulls</li>
+              <li>Cooldown heavy burst windows</li>
+            </ul>
+          </div>
         </div>
       </div>
+
+      <!-- FS DEV AOE -->
+      <div class="card dev">
+        <h2>FS Dev AOE</h2>
+        <button onclick="copyText('fs-dev-aoe', this)">Copy</button>
+        <button onclick="togglePreview(this)">Preview</button>
+        <textarea id="fs-dev-aoe">CsbBPJc41CfcseY0baneJ1IHrBAAAAAAAAAAAzMDmZMzgBmZGjZaYmJDMmZmhZmZmBMjZMmZWmZGMDMjZgFwWwMMhsBWGmBYmZYA</textarea>
+
+        <div class="preview-section">
+          <img src="fs-dev-aoe.png" class="talent-preview">
+          <div class="preview-notes">
+            <p><b>Notes:</b></p>
+            <ul>
+              <li>Flameshaper variant</li>
+              <li>More consistent damage profile</li>
+              <li>Able to flex 1 point of "Arcane Intensity" for "Eye of Infinity" or "Event Horizon"</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="center-column">
+      <div class="macros-wrapper">
+        <button onclick="openLink('macros')">Macros</button>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="section-title">Raid</div>
+
+      <!-- RAID PRES -->
+      <div class="card pres">
+        <h2>CW Pres</h2>
+        <button onclick="copyText('raid-cw-pres', this)">Copy</button>
+        <button onclick="togglePreview(this)">Preview</button>
+        <textarea id="raid-cw-pres">CwbBPJc41CfcseY0baneJ1IHrBAAAAAYmZ2WGYGzMPwsYmZMzywAAAzwYGMmRj5BGAAAgZmRmZmZmZZMDAGYMjNWgBmRDNgFYmZGAGA</textarea>
+
+        <div class="preview-section">
+          <img src="cw-pres-raid.png" class="talent-preview">
+          <div class="preview-notes">
+            <p><b>Notes:</b></p>
+            <ul>
+              <li>Raid-wide healing focused</li>
+              <li>Strong cooldown coverage</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- SC DEV CLEAVE -->
+      <div class="card dev">
+        <h2>SC Dev Cleave</h2>
+        <button onclick="copyText('raid-dev-cleave', this)">Copy</button>
+        <button onclick="togglePreview(this)">Preview</button>
+        <textarea id="raid-dev-cleave">CsbBPJc41CfcseY0baneJ1IHrBAAAAAAAAAAAzMDMDzwMDMYMTjZmpZMWmxMzMz8AzMzAMzMzYmZZMDMwYwCsMGN2GQmJAbYGMzghB</textarea>
+
+        <div class="preview-section">
+          <img src="sc-dev-st.png" class="talent-preview">
+          <div class="preview-notes">
+            <p><b>Notes:</b></p>
+            <ul>
+              <li>Great for 2–4 target cleave</li>
+              <li>Balanced damage profile</li>
+              <li>Can flex "Terror of the Skies" for anything else</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- FS DEV ST -->
+      <div class="card dev">
+        <h2>FS Dev ST</h2>
+        <button onclick="copyText('raid-dev-st', this)">Copy</button>
+        <button onclick="togglePreview(this)">Preview</button>
+        <textarea id="raid-dev-st">CsbBPJc41CfcseY0baneJ1IHrBAAAAAAAAAAAzMDmZYGMwMzYMTDzMZMWGzMzwMzMzAmxMGzMLzMDmBmxMwCYLYGmQ2ALDzAMzMMA</textarea>
+
+        <div class="preview-section">
+          <img src="fs-dev-st.png" class="talent-preview">
+          <div class="preview-notes">
+            <p><b>Notes:</b></p>
+            <ul>
+              <li>Single target focused</li>
+              <li>Best for focusing boss damage</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
     </div>
   </div>
@@ -371,6 +489,11 @@
         document.getElementById("imageModal").style.display = "none";
       }
     });
+
+    function togglePreview(btn) {
+      const card = btn.closest(".card");
+      card.classList.toggle("show-preview");
+    }
   </script>
 
 </body>
