@@ -58,6 +58,7 @@
     
     .pres { background: #14532d; }
     .dev { background: #7f1d1d; }
+    .aug { background: #d4b44f; }
     .neutral { background: #1e293b; }
     
     .pres:hover {
@@ -290,13 +291,13 @@
 
       <!-- M+ PRES -->
       <div class="card pres">
-        <h2>CW Pres</h2>
-        <button onclick="copyText('mplus-cw-pres', this)">Copy</button>
+        <h2>Chrono Pres</h2>
+        <button onclick="copyText('DP-CW', this)">Copy</button>
         <button onclick="togglePreview(this)">Preview</button>
-        <textarea id="mplus-cw-pres">CwbBPJc41CfcseY0baneJ1IHrBAAAAAMzMz2yADzMPwsYmZM2GAAAzwYGjxMiZGAAAgZmRzwMzMLzMDAMmZMz2CLWYYmZmGa2MsYYmZGMzMGA</textarea>
+        <textarea id="DP-CW">CwbBPJc41CfcseY0baneJ1IHrBAAAAAMzMz2yADzMPwsYmZM2GAAAzYGzYMmRMzAAAAMzMywMzMLzMDAMmZMz2CLWYYmZmGa2MsYYmZGMzMGA</textarea>
 
         <div class="preview-section">
-          <img src="cw-pres-mplus.png" class="talent-preview" onclick="openPreviewImage(this.src)">
+          <img src="DP-CW.png" class="talent-preview" onclick="openPreviewImage(this.src)">
           <div class="preview-notes">
             <p><b>Notes:</b></p>
             <ul>
@@ -307,15 +308,15 @@
         </div>
       </div>
 
-      <!-- SC DEV AOE -->
+      <!-- M+ DEV -->
       <div class="card dev">
-        <h2>SC Dev AOE</h2>
-        <button onclick="copyText('sc-dev-aoe', this)">Copy</button>
+        <h2>Scale Dev</h2>
+        <button onclick="copyText('DD-SC', this)">Copy</button>
         <button onclick="togglePreview(this)">Preview</button>
-        <textarea id="sc-dev-aoe">CsbBPJc41CfcseY0baneJ1IHrBAAAAAAAAAAAzMDgZGmhHwMGjZaMzMNDzyMmZmZmZmZGgZmxYmZZMDMwMzwCsMmlGbzMMZmsA2GmBzMAD</textarea>
+        <textarea id="DD-SC">CsbBPJc41CfcseY0baneJ1IHrBAAAAAAAAAAAzMDgZGmZwMGjZaMzMNDzyMmZmZmZmZGgZmxYmZZMDMwMzwCsMmlGbzMMZmsA2GmBzMAD</textarea>
 
         <div class="preview-section">
-          <img src="sc-dev-aoe.png" class="talent-preview" onclick="openPreviewImage(this.src)">
+          <img src="DD-SC.png" class="talent-preview" onclick="openPreviewImage(this.src)">
           <div class="preview-notes">
             <p><b>Notes:</b></p>
             <ul>
@@ -326,23 +327,15 @@
         </div>
       </div>
 
-      <!-- FS DEV AOE -->
-      <div class="card dev">
-        <h2>FS Dev AOE</h2>
-        <button onclick="copyText('fs-dev-aoe', this)">Copy</button>
+      <!-- M+ AUG -->
+      <div class="card aug">
+        <h2>Scale Aug</h2>
+        <button onclick="copyText('DA-SC', this)">Copy</button>
         <button onclick="togglePreview(this)">Preview</button>
-        <textarea id="fs-dev-aoe">CsbBPJc41CfcseY0baneJ1IHrBAAAAAAAAAAAzMDmZMzgBmZGjZaYmJDMmZmhZmZmBMjZMmZWmZGMDMjZgFwWwMMhsBWGmBYmZYA</textarea>
+        <textarea id="DA-SC">CEcBPJc41CfcseY0baneJ1IHrNmZmZbmZGMYmZZGjhZ2AAAAAAAAMmhxMYM1YmZGAAAAMjZMmZWGzMwMLGYMjFWgBmhhGxCmZMzAAD</textarea>
 
         <div class="preview-section">
-          <img src="fs-dev-aoe.png" class="talent-preview" onclick="openPreviewImage(this.src)">
-          <div class="preview-notes">
-            <p><b>Notes:</b></p>
-            <ul>
-              <li>Flameshaper variant</li>
-              <li>More consistent damage profile</li>
-              <li>Able to flex 1 point of "Arcane Intensity" for "Eye of Infinity" or "Event Horizon"</li>
-            </ul>
-          </div>
+          <img src="DA-SC.png" class="talent-preview" onclick="openPreviewImage(this.src)">
         </div>
       </div>
     </div>
@@ -358,32 +351,32 @@
 
       <!-- RAID PRES -->
       <div class="card pres">
-        <h2>CW Pres</h2>
-        <button onclick="copyText('raid-cw-pres', this)">Copy</button>
+        <h2>Chrono Pres</h2>
+        <button onclick="copyText('RP-CW', this)">Copy</button>
         <button onclick="togglePreview(this)">Preview</button>
-        <textarea id="raid-cw-pres">CwbBPJc41CfcseY0baneJ1IHrBAAAAAYmZ2WGYGzMPwsYmZMzywAAAzwYGMmRj5BGAAAgZmRmZmZmZZMDAGYMjNWgBmRDNgFYmZGAGA</textarea>
+        <textarea id="RP-CW">CwbBPJc41CfcseY0baneJ1IHrBAAAAAYmZ2MDmxMjhxMzMLDDAAMjZMjxYGhHYAAAAmZGZmZmZmlxMAYgxM2YBGYGN0wwCMzMDAD</textarea>
 
         <div class="preview-section">
-          <img src="cw-pres-raid.png" class="talent-preview" onclick="openPreviewImage(this.src)">
+          <img src="RP-CW.png" class="talent-preview" onclick="openPreviewImage(this.src)">
           <div class="preview-notes">
             <p><b>Notes:</b></p>
             <ul>
-              <li>Raid-wide healing focused</li>
+              <li>Raid-wide ramp/burst healing focused</li>
               <li>Strong cooldown coverage</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <!-- SC DEV CLEAVE -->
+      <!-- RAID DEV -->
       <div class="card dev">
-        <h2>SC Dev Cleave</h2>
-        <button onclick="copyText('raid-dev-cleave', this)">Copy</button>
+        <h2>Scale Dev</h2>
+        <button onclick="copyText('RD-SC', this)">Copy</button>
         <button onclick="togglePreview(this)">Preview</button>
-        <textarea id="raid-dev-cleave">CsbBPJc41CfcseY0baneJ1IHrBAAAAAAAAAAAzMDMDzwMDMYMTjZmpZMWmxMzMz8AzMzAMzMzYmZZMDMwYwCsMGN2GQmJAbYGMzghB</textarea>
+        <textarea id="RD-SC">CsbBPJc41CfcseY0baneJ1IHrBAAAAAAAAAAAzMDMDzwMDMYMTjZmpZMWmxMzMz8AzMzAMzMzYmZZMDMwYwCsMGN2GQmJAbYGMzghB</textarea>
 
         <div class="preview-section">
-          <img src="sc-dev-st.png" class="talent-preview" onclick="openPreviewImage(this.src)">
+          <img src="RD-SC.png" class="talent-preview" onclick="openPreviewImage(this.src)">
           <div class="preview-notes">
             <p><b>Notes:</b></p>
             <ul>
@@ -395,22 +388,15 @@
         </div>
       </div>
 
-      <!-- FS DEV ST -->
-      <div class="card dev">
-        <h2>FS Dev ST</h2>
-        <button onclick="copyText('raid-dev-st', this)">Copy</button>
+      <!-- RAID AUG -->
+      <div class="card aug">
+        <h2>Chrono Aug</h2>
+        <button onclick="copyText('RA-CW', this)">Copy</button>
         <button onclick="togglePreview(this)">Preview</button>
-        <textarea id="raid-dev-st">CsbBPJc41CfcseY0baneJ1IHrBAAAAAAAAAAAzMDmZYGMwMzYMTDzMZMWGzMzwMzMzAmxMGzMLzMDmBmxMwCYLYGmQ2ALDzAMzMMA</textarea>
+        <textarea id="RA-CW">CEcBPJc41CfcseY0baneJ1IHrNmZmZbmZGMYmZZGjhZ2AAAAAAAAMmhxMYM1YmZGAAAAMjZMmZWGzMwMLGYMjFWgBmhhGxCmZMzAAD</textarea>
 
         <div class="preview-section">
-          <img src="fs-dev-st.png" class="talent-preview" onclick="openPreviewImage(this.src)">
-          <div class="preview-notes">
-            <p><b>Notes:</b></p>
-            <ul>
-              <li>Single target focused</li>
-              <li>Best for focusing boss damage</li>
-            </ul>
-          </div>
+          <img src="RA-CW.png" class="talent-preview" onclick="openPreviewImage(this.src)">
         </div>
       </div>
     </div>
