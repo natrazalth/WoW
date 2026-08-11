@@ -84,8 +84,8 @@ document.querySelectorAll("[data-image]").forEach(button=>{
     button.addEventListener("click",()=>{
         const type=button.dataset.image;
         const images={
-            bcdm:"https://raw.githubusercontent.com/natrazalth/WoW/main/BCDM.png",
-            plat:"https://raw.githubusercontent.com/natrazalth/WoW/main/Plater.png"
+            bcdm:"images/BCDM.png",
+            plat:"images/Plater.png"
         };
         openModal(images[type],type==="bcdm"?"BCDM profile preview":"Platynator profile preview");
     });
