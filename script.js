@@ -4,12 +4,12 @@ const profiles={
 };
 
 const builds = {
-    "mplus-pres-flame": "images/mplus-pres-flame.png",
-    "mplus-pres-chrono": "images/mplus-pres-chrono.png",
-    "mplus-dev-flame": "images/mplus-dev-flame.png",
-    "raid-pres-flame": "images/raid-pres-flame.png",
-    "raid-raid-chrono": "images/raid-pres-chrono.png",
-    "raid-dev-flame": "images/raid-dev-flame.png"
+    "mplus-pres-flame": "build string",
+    "mplus-pres-chrono": "build string",
+    "mplus-dev-flame": "build string",
+    "raid-pres-flame": "build string",
+    "raid-raid-chrono": "build string",
+    "raid-dev-flame": "build string"
 };
 
 const toast=document.getElementById("toast");
