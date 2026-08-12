@@ -4,12 +4,12 @@ const profiles={
 };
 
 const builds = {
-    "mplus-pres-flame": "build string",
-    "mplus-pres-chrono": "build string",
-    "mplus-dev-flame": "build string",
-    "raid-pres-flame": "build string",
-    "raid-raid-chrono": "build string",
-    "raid-dev-flame": "build string"
+    "mplus-pres-flame": "WiP",
+    "mplus-pres-chrono": "CwbBPJc41CfcseY0baneJ1IHrBAAAAAMzMz2yADzMPwsYmZM2GAAAzYGzYMmRMzAAAAMzMywMzMbzMDAMmZMz2CLWYYmZmGa2MsYYmZGMzMGA",
+    "mplus-dev-flame": "CsbBPJc41CfcseY0baneJ1IHrBAAAAAAAAAAAz8ADmZMzwMw8AYMTjZmJjxyYmZGmHYmZGgZmZGzMbzMDmBmZmxCbWGzSjtZGmMT2ALDzgZmZmhB",
+    "raid-pres-flame": "CwbBPJc41CfcseY0baneJ1IHrBAAAAAYmZ2MzMGmHYMbmZmZmNMAAwMmxAjZkZmBAAAYmZmMjZmZ2mZeAAMjZgNwCYGmQWgNDDgZmxA",
+    "raid-raid-chrono": "CwbBPJc41CfcseY0baneJ1IHrBAAAAAYmZ2MDmxMjhZmZmZZAAAMjZMjxYmJYGAAAwMzIzMzMzsNmBADMmxGLwAzohGwCMzMDAD",
+    "raid-dev-flame": "CsbBPJc41CfcseY0baneJ1IHrBAAAAAAAAAAAzMDmZwwMDMGjZaYmJjZWmxMzwMzMzAmxMzYmZbmZwMwMmB2ALBzwEyGYZYAMzMMA "
 };
 
 const toast=document.getElementById("toast");
