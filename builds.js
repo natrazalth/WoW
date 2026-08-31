@@ -250,8 +250,8 @@ const builds = {
             image: "images/lair-pres.png"
         },
         dev: {
-            difficulty: "Mythic",
-            talentString: "",
+            difficulty: "TEST",
+            talentString: "TEST",
             image: "images/lair-dev.png"
         }
     }
