@@ -1,4 +1,4 @@
-const BUILDS_LAST_UPDATED = "August 31, 2026";
+const BUILDS_LAST_UPDATED = "September 3, 2026";
 
 const builds = {
     aof: {
@@ -50,7 +50,7 @@ const builds = {
         type: "dungeon",
         name: "The Blinding Vale",
         pres: {
-            key: 11,
+            key: 12,
             talentString: "CwbBAAAAAAAAAAAAAAAAAAAAAAAAAAAYmZ2MzMGmHYMbmZmZmNMAAwMmxAjZkZmBAAAYmZmMjZmZWmZeAAMjZgNwCYGmQWgNDDgZmxA",
             image: "images/bv-pres.png"
         },
@@ -140,7 +140,7 @@ const builds = {
         type: "raid",
         name: "Entombed Sentinels",
         pres: {
-            difficulty: "Heroic",
+            difficulty: "Mythic",
             talentString: "CwbBAAAAAAAAAAAAAAAAAAAAAAAAAAAYmZwMjh5BGzmhZmZbGDAAMjZMDGzIMDAAAwMzMxYmZmlZmBAzYGYDsAmhJkFDbGGAzMjB",
             image: "images/va2-pres.png"
         },
@@ -155,7 +155,7 @@ const builds = {
         type: "raid",
         name: "The Lost Explorers",
         pres: {
-            difficulty: "Heroic",
+            difficulty: "Mythic",
             talentString: "CwbBAAAAAAAAAAAAAAAAAAAAAAAAAAAYmZwMjh5BGzmhZmZbGDAAMjZMDGzIMDAAAwMzMxYmZmlZmBAzYGYDsAmhJkFDbGGAzMjB",
             image: "images/va3-pres.png"
         },
@@ -245,8 +245,8 @@ const builds = {
         type: "raid",
         name: "Nymrissa Wavecaller",
         pres: {
-            difficulty: "Heroic",
-            talentString: "CwbBAAAAAAAAAAAAAAAAAAAAAAAAAAAYmZ2MzMGmHYMbmZmZmFMAAwMmxAjZkZmBAAAYmZmMjZmZWmZeAAMjZgNwCYGmQWgNDDgZmxA",
+            difficulty: "Mythic",
+            talentString: "CwbBAAAAAAAAAAAAAAAAAAAAAAAAAAAYmZwDMjh5BGzmZMzMbzYAAgZMjZwYGhZAAAAmZmJGzMzsMzMAYGzAbgFwMMhsYYzwAYmZMA",
             image: "images/lair-pres.png"
         },
         dev: {
